@@ -1,0 +1,5 @@
+# So we don't check in the mess
+
+*.deb
+basedir/*
+!basedir/README.md
