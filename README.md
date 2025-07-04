@@ -33,9 +33,23 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
 ```
 
+## Security and Layers
+
+In the container world images can often have exessive layers and libraries that
+both use up space. These layers can have a computational impact that increases
+startup resource usage. These layers and size will also increase the security
+scan time including false positives from unused libraries.
+
 ## Resources
 
 - https://hub.docker.com/repository/docker/lathama/slimimage/general
 - https://lathama.net/git/lathama/Dockerfiles/src/branch/master/slimimage/README.md
 - Distroless https://github.com/GoogleContainerTools/distroless
 - https://github.com/lathama/slimimage
+
+
+## Thanks
+
+If you find this useful and want to say thanks I have options at:
+
+- https://lathama.net/Thanks
