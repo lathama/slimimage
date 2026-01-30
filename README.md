@@ -2,7 +2,7 @@
 
 ## About
 
-Do you need a small safe container for an application to keep everyone happy from implementation to security teams? Remember, if there is nothing in the container than the security scanner can't find anything to report on. Have you tried `distroless` and wonder why the build system has to be so complex?
+Do you need a small safe container for an application to keep everyone happy from implementation to security teams? Remember, if there is nothing in the container than the security scanner can't find anything to report on. Have you tried [distroless][1] and wonder why the build system has to be so complex?
 
 - Debian based (The idea could be duplicated on other distros)
 - Download the packages, unpack them to a directory with base filesystem
@@ -54,3 +54,5 @@ scan time including false positives from unused libraries.
 If you find this useful and want to say thanks I have options at:
 
 - https://lathama.net/Thanks
+
+[1]: https://github.com/GoogleContainerTools/distroless
