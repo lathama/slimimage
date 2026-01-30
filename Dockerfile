@@ -1,7 +1,7 @@
 # https://lathama.net/Tech/Basics/Container
 
-FROM docker.io/debian:stable AS buildenv
-LABEL version="0.1" description="Minimal Slim Image" maintainer="Andrew Latham lathama@gmail.com"
+FROM docker.io/debian:trixie AS buildenv
+LABEL version="0.2" description="Minimal Slim Image" maintainer="Andrew Latham lathama@gmail.com"
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 WORKDIR /tmp
@@ -12,4 +12,4 @@ RUN for f in *.deb; do dpkg -x $f basedir/; done
 
 FROM scratch AS slimimagepython
 COPY --from=buildenv /tmp/basedir /
-ENTRYPOINT ["/usr/bin/python3.11"]
+ENTRYPOINT ["/usr/bin/python3.13"]

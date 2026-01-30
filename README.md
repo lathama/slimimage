@@ -13,10 +13,12 @@ Do you need a small safe container for an application to keep everyone happy fro
 
 ## Howto
 
+On Debian Trixie (13)
+
 ``` bash
-apt-get download base-files ca-certificates netbase libbz2-1.0 libc6 libdb5.3 libexpat1 libffi8 liblzma5 libncursesw6 libpython3.11-minimal libpython3.11-stdlib libreadline8 libsqlite3-0 libssl3 libtinfo6 libtirpc3 libuuid1 media-types openssl python3.11-minimal tzdata zlib1g
+apt-get download base-files ca-certificates netbase libbz2-1.0 libc6 libdb5.3t64 libexpat1 libffi8 liblzma5 libncursesw6 libpython3.13-minimal libpython3.13-stdlib libreadline8t64 libsqlite3-0 libssl3t64 libtinfo6 libtirpc3t64 libuuid1 media-types openssl python3.13-minimal tzdata zlib1g
 for f in *.deb; do dpkg -x $f basedir/; done
-tar -C basedir -c . | docker import - slimimage
+tar -C basedir -c . | docker import - slimimagepython
 ```
 
 ## Dogfooding
@@ -24,13 +26,14 @@ tar -C basedir -c . | docker import - slimimage
 Building within a Docker build file.
 
 ``` bash
-docker build . --target slimimagepython
+docker build . --target slimimagepython --tag slimimagepython
  --snip--
  => => naming to docker.io/lathama/slimimage:python
-docker run -it slimimage
-Python 3.11.2 (main, Mar 13 2023, 12:18:29) [GCC 12.2.0] on linux
+docker run -it slimimagepython
+Python 3.13.5 (main, Jun 25 2025, 18:55:22) [GCC 14.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
->>> exit()
+warning: can't use pyrepl: setupterm: could not find terminfo database; TERM=xterm
+>>>
 ```
 
 ## Security and Layers
