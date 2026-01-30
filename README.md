@@ -45,8 +45,6 @@ scan time including false positives from unused libraries.
 
 ## Resources
 
-- https://hub.docker.com/repository/docker/lathama/slimimage/general
-- https://lathama.net/git/lathama/Dockerfiles/src/branch/master/slimimage/README.md
 - Distroless https://github.com/GoogleContainerTools/distroless
 - https://github.com/lathama/slimimage
 
