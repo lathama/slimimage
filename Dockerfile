@@ -1,5 +1,3 @@
-# https://lathama.net/Tech/Basics/Container
-
 FROM docker.io/debian:trixie AS buildenv
 LABEL version="0.2" description="Minimal Slim Image" maintainer="Andrew Latham lathama@gmail.com"
 ENV LANG C.UTF-8

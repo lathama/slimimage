@@ -1,3 +1,4 @@
+# https://git-scm.com/docs/gitignore
 # So we don't check in the mess
 
 *.deb
